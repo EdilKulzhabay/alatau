@@ -8,6 +8,35 @@ import Complex7 from '../assets/Complex7.png'
 
 export default function LogisticComplex(props) {
 
+    const ImageDescription = {
+        description1: {
+            ru: [
+                "Пропускная способность - 30 млн. пассажиров в год",
+                "Две взлетно-посадочные полосы (с возможностью расширения до трёх)",
+                "24 телескопических трапа",
+                "48 стоек для авиалайнеров",
+                "Грузовой терминал с возможностью обработки 750 тыс. тонн грузов в год",
+                "Зона технического обслуживания"
+            ],
+            kz: [
+                "Өткізу қабілеті – жылына 30 млн жолаушы",
+                "Екі ұшу-қону жолағы (үшке дейін кеңейту мүмкіндігімен)",
+                "24 телескопиялық трап",
+                "48 әуе лайнеріне арналған тұрақ",
+                "Жылына 750 мың тонна жүк өңдеуге арналған жүк терминалы",
+                "Техникалық қызмет көрсету аймағы"
+            ],
+            en: [
+                "Capacity – 30 million passengers per year",
+                "Two runways (expandable to three)",
+                "24 telescopic jet bridges",
+                "48 stands for airliners",
+                "Cargo terminal with capacity to handle 750,000 tons per year",
+                "Maintenance area"
+            ]
+        }
+    }
+
     return (
         <div className="container px-4 py-8 lg:py-20 mx-auto">
             <div className="flex flex-col gap-y-5 lg:flex-row lg:gap-x-[50px]">
@@ -37,14 +66,15 @@ export default function LogisticComplex(props) {
                 </div>
 
                 <div className='lg:hidden mt-4'>
-                    <p className='font-bold'> Международный авиационный Хаб (2000 га)</p>
+                    <p className='font-bold'>
+                        {props.lg === 'ru' && "Международный авиационный Хаб (2000 га)"}
+                        {props.lg === 'kz' && "Халықаралық авиация хабы (2000 га)"}
+                        {props.lg === 'en' && "International Aviation Hub (2000 ha)"}
+                    </p>
                     <ol className='mt-3 ml-2 [&>li]:relative [&>li]:pl-5 [&>li]:before:content-[""] [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-1/2 [&>li]:before:-translate-y-1/2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-black [&>li]:before:rounded-full'>
-                        <li>Пропускная способность - 30 млн. пассажиров в год</li>
-                        <li>Две взлетно-посадочные полосы (с возможностью расширения до трёх)</li>
-                        <li>24 телескопических трапа</li>
-                        <li>48 стоек для авиалайнеров</li>
-                        <li>Грузовой терминал с возможностью обработки 750 тыс. тонн грузов в год</li>
-                        <li>Зона технического обслуживания</li>
+                        {ImageDescription.description1[props.lg].map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                        ))}
                     </ol>
                 </div>
 
@@ -54,13 +84,10 @@ export default function LogisticComplex(props) {
                             <img src={Complex2} alt="" className="w-full" />
                             <div className='absolute bottom-1 left-1 right-1 bg-[#0081FE] text-white p-4 hidden lg:block'>
                                 <p className='font-bold'> Международный авиационный Хаб (2000 га)</p>
-                                <ol className='mt-3 ml-2 [&>li]:relative [&>li]:pl-5 [&>li]:before:content-[""] [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-1/2 [&>li]:before:-translate-y-1/2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-white [&>li]:before:rounded-full'>
-                                    <li>Пропускная способность - 30 млн. пассажиров в год</li>
-                                    <li>Две взлетно-посадочные полосы (с возможностью расширения до трёх)</li>
-                                    <li>24 телескопических трапа</li>
-                                    <li>48 стоек для авиалайнеров</li>
-                                    <li>Грузовой терминал с возможностью обработки 750 тыс. тонн грузов в год</li>
-                                    <li>Зона технического обслуживания</li>
+                                <ol className='mt-3 ml-2 [&>li]:relative [&>li]:pl-5 [&>li]:before:content-[""] [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-1/2 [&>li]:before:-translate-y-1/2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-black [&>li]:before:rounded-full'>
+                                    {ImageDescription.description1[props.lg].map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
                                 </ol>
                             </div>
                         </div>

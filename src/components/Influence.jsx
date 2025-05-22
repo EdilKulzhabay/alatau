@@ -17,11 +17,11 @@ export default function Influence(props) {
     const [fade, setFade] = useState(false)
 
     const handleChangeImage = (newImage) => {
-        setFade(true) // Включаем анимацию исчезновения
+        setFade(true)
         setTimeout(() => {
-            setImage(newImage) // Меняем изображение
-            setFade(false) // Включаем анимацию появления
-        }, 300) // Длительность совпадает с CSS-анимацией
+            setImage(newImage)
+            setFade(false)
+        }, 300)
     }
 
     return (

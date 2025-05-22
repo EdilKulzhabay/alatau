@@ -3,6 +3,13 @@ import Logo from '../assets/Logo.png'
 
 export default function Header(props) {
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
     return (
         <div
             className='text-white'
@@ -19,22 +26,22 @@ export default function Header(props) {
                     </div>
                     <div className='hidden lg:flex gap-x-[60px] justify-between font-semibold text-[12px] sm:text-[14px] items-center'>
                         <div className='flex justify-between gap-x-[62px] font-semibold text-[12px] sm:text-[14px]'>
-                            <button>
+                            <button onClick={() => scrollToSection('main')}>
                                 {props.lg === "ru" && "О проекте"}
                                 {props.lg === "kz" && "Жоба туралы"}
                                 {props.lg === "en" && "About the project"}
                             </button>
-                            <button>
+                            <button onClick={() => scrollToSection('complex')}>
                                 {props.lg === 'ru' && "Комплекс"}
                                 {props.lg === 'kz' && "Комплекс"}
                                 {props.lg == 'en' && "Complex"}
                             </button>
-                            <button>
+                            <button onClick={() => scrollToSection('stages')}>
                                 {props.lg === 'ru' && "Этапы"}
                                 {props.lg === 'kz' && "Кезеңдер"}
                                 {props.lg == 'en' && "Stages"} 
                             </button>
-                            <button>
+                            <button onClick={() => scrollToSection('contacts')}>
                                 {props.lg === 'ru' && "Контакты"}
                                 {props.lg === 'kz' && "Байланыстар"}
                                 {props.lg === 'en' && "Contacts"}
