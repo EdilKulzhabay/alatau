@@ -75,13 +75,13 @@ export default function Header(props) {
                     {props.lg === 'en' && "The first multimodal transport and economic cluster in Kazakhstan"}
                 </div>
 
-                <div className='mt-6 lg:mt-9'>
+                {/* <div className='mt-6 lg:mt-9'>
                     <button className='w-full lg:max-w-max py-2 lg:px-[75px] text-center bg-[#0A69C4] rounded-lg'>
                         {props.lg === 'ru' && "Смотреть ролик"}
                         {props.lg === 'kz' && "Бейнені көру"}
                         {props.lg === 'en' && "Watch the video"}
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

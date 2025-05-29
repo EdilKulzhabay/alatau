@@ -23,7 +23,9 @@ export default function Footer(props) {
                     </div>
 
                     <div className='text-lg lg:text-xl font-medium border-b border-white'>
-                        (727) 38-4356
+                        <a href="tel:+7727384356" className="hover:text-gray-300 transition-colors">
+                            +7 (727) 38-43-56
+                        </a>
                     </div>
 
                     <div className='text-lg lg:text-xl font-medium border-b border-white'>

@@ -71,7 +71,7 @@ export default function LogisticComplex(props) {
                         {props.lg === 'kz' && "Халықаралық авиация хабы (2000 га)"}
                         {props.lg === 'en' && "International Aviation Hub (2000 ha)"}
                     </p>
-                    <ol className='mt-3 ml-2 [&>li]:relative [&>li]:pl-5 [&>li]:before:content-[""] [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-1/2 [&>li]:before:-translate-y-1/2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-black [&>li]:before:rounded-full'>
+                    <ol className='mt-3 ml-2 [&>li]:relative [&>li]:pl-5 [&>li]:before:content-[""] [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-1/2 [&>li]:before:-translate-y-1/2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-white [&>li]:before:rounded-full'>
                         {ImageDescription.description1[props.lg].map((item, idx) => (
                             <li key={idx}>{item}</li>
                         ))}
@@ -84,7 +84,7 @@ export default function LogisticComplex(props) {
                             <img src={Complex2} alt="" className="w-full" />
                             <div className='absolute bottom-1 left-1 right-1 bg-[#0081FE] text-white p-4 hidden lg:block'>
                                 <p className='font-bold'> Международный авиационный Хаб (2000 га)</p>
-                                <ol className='mt-3 ml-2 [&>li]:relative [&>li]:pl-5 [&>li]:before:content-[""] [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-1/2 [&>li]:before:-translate-y-1/2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-black [&>li]:before:rounded-full'>
+                                <ol className='mt-3 ml-2 [&>li]:relative [&>li]:pl-5 [&>li]:before:content-[""] [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-1/2 [&>li]:before:-translate-y-1/2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-white [&>li]:before:rounded-full'>
                                     {ImageDescription.description1[props.lg].map((item, idx) => (
                                         <li key={idx}>{item}</li>
                                     ))}
